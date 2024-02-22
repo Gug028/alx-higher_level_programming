@@ -97,7 +97,7 @@ class Rectangle(Base):
             Updates the arguments props in the class
         """
         if len(args) == 0:
-            for key, val in kwargs, items():
+            for key, val in kwargs.items():
                 self.__setattr__(key, val)
             return
         try:
