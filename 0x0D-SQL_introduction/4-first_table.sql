@@ -1,2 +1,5 @@
--- prints the full description of a table first_table
-SHOW CREATE TABLE first_table;
+-- Create a table
+CREATE TABLE IF NOT EXISTS first_table (
+	id INT,
+	name VARCHAR(255)
+	);
