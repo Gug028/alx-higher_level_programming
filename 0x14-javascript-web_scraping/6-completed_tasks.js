@@ -13,3 +13,10 @@ request.get(apiUrl, (error, response, body) => {
   const completedTasksByUser = {};
 
   todos.forEach(todo => {
+    if (todo.completed) {
+      const userId = todo.userId;
+      completedTasksByUser[userId] = (completedTasksByUser[userId] || 0) + 1;
+    }
+  });
+  console.log(completedTasksByUser);
+});
